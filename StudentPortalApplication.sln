@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentPortalUI", "StudentPortal\StudentPortalUI.csproj", "{F98CB4E1-12EC-4698-B1CC-BB763D67D93A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentPortal.UI", "StudentPortal\StudentPortal.UI.csproj", "{F98CB4E1-12EC-4698-B1CC-BB763D67D93A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentPortal.BL", "StudentPortal.BL\StudentPortal.BL.csproj", "{C78D7FD0-C78D-4029-85D5-5167F0265DA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentPortal.BL", "StudentPortal.BL\StudentPortal.BL.csproj", "{C78D7FD0-C78D-4029-85D5-5167F0265DA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentPortal.UI.Models", "StudentPortal.UI.Models\StudentPortal.UI.Models.csproj", "{251965F9-69D6-447C-8F39-5A55A5771C74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentPortal.UI.Models", "StudentPortal.UI.Models\StudentPortal.UI.Models.csproj", "{251965F9-69D6-447C-8F39-5A55A5771C74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
