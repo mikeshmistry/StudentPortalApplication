@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using StudentPortal.Models;
-using System;
-using System.Collections.Generic;
+using StudentPortal.UI.Models.SecurityModels;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace StudentPortal.Controllers
 {
