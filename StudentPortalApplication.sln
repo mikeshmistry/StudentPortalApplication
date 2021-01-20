@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentPortal.BL", "Student
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentPortal.UI.Models", "StudentPortal.UI.Models\StudentPortal.UI.Models.csproj", "{251965F9-69D6-447C-8F39-5A55A5771C74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentPortal.Security", "StudentPortal.Security\StudentPortal.Security.csproj", "{DBF7D2E1-8A9F-4174-80F8-FB1190CC5700}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{251965F9-69D6-447C-8F39-5A55A5771C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{251965F9-69D6-447C-8F39-5A55A5771C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{251965F9-69D6-447C-8F39-5A55A5771C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF7D2E1-8A9F-4174-80F8-FB1190CC5700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF7D2E1-8A9F-4174-80F8-FB1190CC5700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF7D2E1-8A9F-4174-80F8-FB1190CC5700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF7D2E1-8A9F-4174-80F8-FB1190CC5700}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
