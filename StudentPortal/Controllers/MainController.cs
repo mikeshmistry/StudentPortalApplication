@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace StudentPortal.UI.Controllers
 {
     /// <summary>
-    /// Controller For the Logged in administrator
+    /// Controller For the Logged in student
     /// </summary>
     [AutoValidateAntiforgeryToken]
     [Authorize]
