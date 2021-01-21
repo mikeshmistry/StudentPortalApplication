@@ -68,16 +68,18 @@ namespace StudentPortal.UI.Areas.Identity.Pages.Account
                 var student = new StudentModel() { StudentId = RegisterUserModel.StudentId, FirstName = RegisterUserModel.FirstName, LastName = RegisterUserModel.LastName };
                
                 
+                
                 var isRegistered = await studentBusinessObject.IsRegisteredAsync(student);
 
                 //user is registered 
                 if (isRegistered)
                 {
-                    var user = new ApplicationUser { UserName = RegisterUserModel.UserName, Email = RegisterUserModel.Email };
+                    var user = new ApplicationUser { UserName = RegisterUserModel.UserName, Email = RegisterUserModel.Email, StudentId = student.StudentId};
                     var result = await _userManager.CreateAsync(user, RegisterUserModel.Password);
 
                     if (result.Succeeded)
                     {
+                       
                         _logger.LogInformation("User created a new account with password.");
                         return LocalRedirect(returnUrl);
 
