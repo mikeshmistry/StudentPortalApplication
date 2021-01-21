@@ -1,5 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using StudentPortal.Security.Application;
+using StudentPortal.UI.Models.Models;
+using System.Threading.Tasks;
 
 namespace StudentPortal.UI.Controllers
 {
@@ -10,7 +14,6 @@ namespace StudentPortal.UI.Controllers
     [Authorize]
     public class MainController : Controller
     {
-
         #region Action Methods
 
         /// <summary>
@@ -19,7 +22,8 @@ namespace StudentPortal.UI.Controllers
         /// <returns>The main view for the logged in user</returns>
         public IActionResult Index()
         {
-            return View("Views/Main.cshtml");
+
+            return RedirectToAction("Index","ViewEnrolledCourses");
            
         }
 

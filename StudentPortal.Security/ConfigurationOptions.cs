@@ -32,7 +32,7 @@ namespace StudentPortal.Security
         /// <param name="options">The identity options for the lockout options</param>
         public static void LockOutOptions(IdentityOptions options)
         {
-            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+           // options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
             options.Lockout.MaxFailedAccessAttempts = 5;
             options.Lockout.AllowedForNewUsers = true;
 
@@ -58,7 +58,7 @@ namespace StudentPortal.Security
         public static void CookieOptions(CookieAuthenticationOptions options)
         {
             options.Cookie.HttpOnly = true;
-            options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+           // options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
 
             options.LoginPath = "/Identity/Account/Login";
             options.AccessDeniedPath = "/Identity/Account/AccessDenied";

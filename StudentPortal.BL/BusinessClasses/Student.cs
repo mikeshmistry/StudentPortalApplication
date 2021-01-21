@@ -193,6 +193,39 @@ namespace StudentPortal.BL.BusinessClasses
             return studentList;
         }
 
+        /// <summary>
+        /// Method to return all the course that the student is enrolled in
+        /// </summary>
+        /// <param name="studentId">The id of the student</param>
+        /// <returns>A list of enrolled courses</returns>
+        public async Task<List<CourseModel>> GetEnrolledCoursesAsync(int studentId)
+        {
+            //returned list of enrolled course
+            List<CourseModel> courseList = new List<CourseModel>();
+
+            try
+            {
+                List<Entities.Course> courses = await Task.Run(() => studentRepository.GetEnrolledCourses(studentId));
+
+                //convert to course Model
+                courseList = (from course in courses
+                              select new CourseModel
+                              {
+                                  CourseId = course.CourseId,
+                                  Name = course.Name,
+                                  Description = course.Description
+                                  
+                              }).ToList<CourseModel>();
+  
+            }
+            catch(Exception ex)
+            {
+
+            }
+
+            return courseList;
+        }
+
         #endregion
 
         #region Private Methods
