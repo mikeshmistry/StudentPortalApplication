@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudentPortal.Security.Application
 {
@@ -7,6 +8,16 @@ namespace StudentPortal.Security.Application
     /// </summary>
     public class ApplicationUser : IdentityUser
     {
+
+        #region Properties
         
+        /// <summary>
+        /// The Student Id of the student
+        /// </summary>
+        [Required]
+        public int StudentId { get; set; } 
+
+        #endregion 
+
     }
 }
