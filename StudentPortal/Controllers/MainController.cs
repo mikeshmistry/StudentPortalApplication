@@ -10,7 +10,6 @@ namespace StudentPortal.UI.Controllers
     /// <summary>
     /// Controller For the Logged in student
     /// </summary>
-    [AutoValidateAntiforgeryToken]
     [Authorize]
     public class MainController : Controller
     {

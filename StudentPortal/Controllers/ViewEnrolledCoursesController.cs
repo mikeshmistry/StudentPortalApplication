@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StudentPortal.BL.BusinessClasses;
 using StudentPortal.Security.Application;
@@ -13,11 +14,9 @@ namespace StudentPortal.UI.Controllers
     /// <summary>
     /// Controller class for viewing enrolled courses
     /// </summary>
+    [Authorize]
     public class ViewEnrolledCoursesController : Controller
     {
-
-
-
         #region Fields
 
         /// <summary>
