@@ -24,14 +24,7 @@ namespace StudentPortal.BL
         /// </summary>
         public BusinessBase()
         {
-            var options = new DbContextOptionsBuilder<StudentGradingContext>()
-                      .UseSqlServer("Server=localhost\\SQLEXPRESS; Database=UniversityDB;Trusted_Connection=True;")
-                      .Options;
-
-            StudentGradingContext = new StudentGradingContext(options);
-            
-         
-            
+            StudentGradingContext = new StudentGradingContext();       
         }
 
         #endregion

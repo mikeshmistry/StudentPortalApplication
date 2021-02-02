@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using StudentPortal.UI.Models.Models;
+using Entities;
 
 namespace StudentPortal.BL.BusinessClasses
 {
@@ -226,6 +227,38 @@ namespace StudentPortal.BL.BusinessClasses
             return courseList;
         }
 
+        /// <summary>
+        /// Method to get all grades for a student
+        /// </summary>
+        /// <param name="studentId">The student id</param>
+        /// <returns>A list of grades for the student. Null otherwise</returns>
+        public async Task<List<GradeModel>> GetGradesAsync(int studentId)
+        {
+            var grades = new List<GradeModel>();
+
+
+            try
+            {
+                var allgrades = await Task.Run(() => studentRepository.GetGrades(studentId));
+
+                grades = (from grade in allgrades
+                          select new GradeModel()
+                          {
+                              GradeId = grade.GradeId,
+                              LetterGrade = grade.LetterGrade,
+                              Course = ConvertCourseToCourseModel(grade.Course)
+                          }).ToList<GradeModel>();
+
+
+            } 
+            catch(Exception ex)
+            {
+
+            }
+
+            return grades;
+        }
+
         #endregion
 
         #region Private Methods
@@ -249,6 +282,26 @@ namespace StudentPortal.BL.BusinessClasses
                 convertedStudent.LastName = student.LastName;
             }
             return convertedStudent;
+        }
+
+        /// <summary>
+        /// Method to convert an entity course to a course model
+        /// </summary>
+        /// <param name="course"></param>
+        /// <returns></returns>
+        private CourseModel ConvertCourseToCourseModel(Entities.Course course)
+        {
+            var courseModel = new CourseModel();
+
+            //course is not null covert it
+            if(course !=null)
+            {
+                courseModel.CourseId = course.CourseId;
+                courseModel.Name = course.Name;
+                courseModel.Description = course.Description;
+            }
+
+            return courseModel;
         }
 
         #endregion
