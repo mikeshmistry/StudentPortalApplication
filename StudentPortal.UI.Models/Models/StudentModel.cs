@@ -42,14 +42,10 @@ namespace StudentPortal.UI.Models.Models
 
         #endregion
 
-        #region Default Constructor
-
-        public StudentModel()
-        {
-
-        }
-
-        #endregion 
+        /// <summary>
+        /// List of grades for the student
+        /// </summary>
+        public List<GradeModel> Grades { get; set; }
 
     }
 }
