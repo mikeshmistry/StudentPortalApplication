@@ -1,0 +1,59 @@
+﻿@*
+    View for viewing student grades uses the ViewGradesController class
+*@
+
+@using StudentPortal.UI.Models.Models
+
+@model StudentModel
+
+@{
+    ViewData["Title"] = "View Grades";
+    Layout = "~/Views/Shared/_LoggedInLayout.cshtml";
+}
+
+<h4>Assign Grades</h4>
+<br />
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+               Course
+            </th>
+            <th>
+                Grade
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Grades != null && Model.Grades.Count != 0)
+        {
+
+            @foreach (var item in Model.Grades)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Course.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LetterGrade)
+                    </td>
+                </tr>
+            }
+        }
+
+        else
+        {
+            <tr>
+                <td>
+                    No Grades Are Assigned
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
