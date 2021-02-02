@@ -64,7 +64,7 @@ namespace StudentPortal
             services.Configure<IdentityOptions>(ConfigurationOptions.UserOptions);
 
             //Configure cooking options
-            services.ConfigureApplicationCookie(ConfigurationOptions.CookieOptions);
+         //   services.ConfigureApplicationCookie(ConfigurationOptions.CookieOptions);
 
         }
 
